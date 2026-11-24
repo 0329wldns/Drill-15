@@ -62,3 +62,5 @@ class Zombie:
             if other.stopped:
                 return
             self.scale = self.scale / 2.0
+            if self.scale < 0.5:
+                game_world.remove_object(self)

@@ -45,6 +45,7 @@ class Zombie:
         elif self.x < MIN_X:
             self.dir = 1
         self.x = clamp(MIN_X, self.x, MAX_X)
+        self.y = 50 + 100 * self.scale
 
     def draw(self):
         image = Zombie.images['Walk'][int(self.frame)]
